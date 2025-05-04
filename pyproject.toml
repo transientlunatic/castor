@@ -10,7 +10,6 @@ dynamic = [
 	"version"
 	]
 
-python = ">=3.8,<4.0"
 click = "^8.1.8"
 
 dependencies = [
@@ -18,6 +17,7 @@ dependencies = [
 	     "mypy",
 	     "pre-commit",
 	     "tox",
+	     "pillow (>=11.2.1,<12.0.0)",
 ]
 
 
@@ -30,6 +30,8 @@ packages = [
   {include = "castor_gallery", from = "python", to = "castor-gallery"},
 ]
 
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
 
 [project.scripts]
 castor = "castor_gallery.__main__:castor"
